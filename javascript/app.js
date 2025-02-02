@@ -1,6 +1,6 @@
-document.addEventlistener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const tableBody = document.getElementById('data-table-body')
-    const fetchDataAnddisplay = async () => {
+    const fetchDataAndDisplay = async () => {
         try {
 
             const response = await fetch('https://restful-library-api.onrender.com/users', {})
@@ -20,5 +20,6 @@ document.addEventlistener('DOMContentLoaded', () => {
             console.log('Error loading data', err)
             tableBody.innerHTML = `<tr><td colspan="3" class="text-center text-danger">Error Fetching Data</td></tr>`
         }
-        fetchDataAnddisplay()
-    });
+    };
+    fetchDataAndDisplay();
+});
