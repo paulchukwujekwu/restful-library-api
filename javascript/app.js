@@ -20,6 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Error loading data', err)
             tableBody.innerHTML = `<tr><td colspan="3" class="text-center text-danger">Error Fetching Data</td></tr>`
         }
-    };
+    }
     fetchDataAndDisplay();
 });
