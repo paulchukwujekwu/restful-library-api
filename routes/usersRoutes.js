@@ -10,7 +10,7 @@ const agent = new https.Agent({
 
 router.get('/', async (req, res) => {
     try {
-        const response = await fetch(`${process.env.API_BASE_URL}/users`, { agent })
+        const response = await fetch('https://jsonplaceholder.typicode.com/users', { agent })
         console.log(response);
         const data = await response.json();
         return res.json(data);
